@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using cleanArch.Application.Features.Posts.Commands.CreatePost;
 using cleanArch.Application.Features.Posts.Queries.GetPostDetail;
 using cleanArch.Application.Features.Posts.Queries.GetPostsList;
 using cleanArch.Domain;
@@ -12,10 +13,11 @@ namespace cleanArch.Application.Profiles
 {
     public class AutoMapperProfile : Profile
     {
-        public AutoMapperProfile() { 
+        public AutoMapperProfile()
+        {
             CreateMap<Post, GetPostsListViewModel>().ReverseMap();
             CreateMap<Post, GetPostDetailViewModel>().ReverseMap();
+            CreateMap<Post, CreatePostCommand>().ReverseMap();
         }
-        
     }
 }
