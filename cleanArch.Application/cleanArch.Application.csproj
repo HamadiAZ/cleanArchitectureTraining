@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include=".\cleanArch.Domain.csproj" />
+    <ProjectReference Include="..\cleanArch.Domain\cleanArch.Domain.csproj" />
   </ItemGroup>
 
 </Project>
