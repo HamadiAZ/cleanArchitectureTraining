@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
 using cleanArch.Application.Features.Posts.Commands.CreatePost;
+using cleanArch.Application.Features.Posts.Commands.DeletePost;
+using cleanArch.Application.Features.Posts.Commands.UpdatePost;
 using cleanArch.Application.Features.Posts.Queries.GetPostDetail;
 using cleanArch.Application.Features.Posts.Queries.GetPostsList;
 using cleanArch.Domain;
@@ -17,7 +19,10 @@ namespace cleanArch.Application.Profiles
         {
             CreateMap<Post, GetPostsListViewModel>().ReverseMap();
             CreateMap<Post, GetPostDetailViewModel>().ReverseMap();
+
             CreateMap<Post, CreatePostCommand>().ReverseMap();
+            CreateMap<Post, UpdatePostCommand>().ReverseMap();
+            CreateMap<Post, DeletePostCommand>().ReverseMap();
         }
     }
 }

@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace cleanArch.Application.Contracts
 {
-    public interface IPostRepository: IAsyncRepository<Post>
+    public interface IPostRepository : IAsyncRepository<Post>
     {
-        Task<IReadOnlyList<Post>> GetAllPostsAsync(bool includeCategory); 
-        Task<Post> GetPostByIdAsync(Guid id, bool includeCategory); 
+        Task<IReadOnlyList<Post>> GetAllPostsAsync(bool includeCategory);
+
+        Task<Post> GetPostByIdAsync(Guid id, bool includeCategory);
     }
 }
