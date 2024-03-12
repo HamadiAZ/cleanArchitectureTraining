@@ -20,6 +20,7 @@ namespace cleanArch.Application.Profiles
             CreateMap<Post, GetPostsListViewModel>().ReverseMap();
             CreateMap<Post, GetPostDetailViewModel>().ReverseMap();
 
+            CreateMap<Category, CategoryDto>();
             CreateMap<Post, CreatePostCommand>().ReverseMap();
             CreateMap<Post, UpdatePostCommand>().ReverseMap();
             CreateMap<Post, DeletePostCommand>().ReverseMap();
